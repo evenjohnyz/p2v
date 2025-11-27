@@ -1,0 +1,90 @@
+# ==========================
+# 1. Python & System Junk
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# ==========================
+# 2. IDE / Editor Configs
+# ==========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================
+# 3. Environments
+# ==========================
+# 忽略虚拟环境文件夹
+venv/
+env/
+.env
+.venv/
+# 如果你的 conda 环境装在项目里，也忽略它
+miniconda3/
+anaconda3/
+
+# ==========================
+# 4. Large Media Files (Inputs & Outputs)
+# ==========================
+# 忽略所有生成的视频、音频、图片结果
+outputs/
+result/
+results/
+*.mp4
+*.avi
+*.mov
+*.wav
+*.mp3
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# 忽略临时生成的 MoviePy 文件
+*TEMP_MPY*
+
+# ==========================
+# 5. Project Data & Assets
+# ==========================
+# 忽略下载的论文数据和素材
+data/
+assets/
+# 忽略 LaTeX 压缩包
+*.tar.gz
+*.zip
+
+# ==========================
+# 6. Model Weights (Crucial!)
+# ==========================
+# 绝对不要上传大模型权重
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+*.onnx
+pretrained_models/
+checkpoints/
+weights/
+
+# 针对 Hallo2/InsightFace 的特定模型目录
+Paper2Video/hallo2/pretrained_models/
+~/.insightface/
+
+# ==========================
+# 7. Logs & Temporary Files
+# ==========================
+*.log
+tmp/
+temp/
+
+# ==========================
+# 8. Exceptions (保留的文件)
+# ==========================
+# 如果你希望保留某些特定的示例图片（如 README 用的），可以用 ! 排除
+# !assets/demo_image.png

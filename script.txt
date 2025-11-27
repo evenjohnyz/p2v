@@ -1,0 +1,19 @@
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(python -c 'import site; print(site.getsitepackages()[0])')/nvidia/cudnn/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(python -c 'import site; print(site.getsitepackages()[0])')/nvidia/cublas/lib
+
+
+chmod +x ./1_merage.bash
+
+LD_LIBRARY_PATH="" python /home/zhang/Dev/p2v/Paper2Video/src/pipeline.py     
+    --model_name_t gpt-5.1     
+    --model_name_v gpt-5.1     
+    --model_name_talking hallo2     
+    --result_dir /home/zhang/Dev/p2v/outputs/Snake_Robot     
+    --paper_latex_root /home/zhang/Dev/p2v/data/arXiv-2503.18308v1     
+    --ref_img /home/zhang/Dev/p2v/data/image/ramezani-a.jpg     
+    --ref_audio /home/zhang/Dev/p2v/data/wav/output_cut.wav     
+    --talking_head_env /home/zhang/Dev/p2v/run_hallo.sh     
+    --gpu_list "0"     
+    --stage "[\"3\"]"
+
